@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+<div>  <h1 id="title">Registration Form</h1>
+    <p id="description">Please fill out this form with required Information</p>
+    <form id="survey-form">
+
+    <fieldset>
+        <label for="name" id="name-label" >Enter Your Name :
+            <input id="name" type="text" placeholder="Only name without title" required></label>
+        <label for="email" id="email-label">Enter Your Email :<input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Invalid email address" placeholder="Active email" required></label>
+        <label for="number" id="number-label">Enter Your Phone Number :<input type="number" min="9" max="12" placeholder="10 digits numbers" required id="number"></label>
+       
+        </fieldset>
+    <fieldset>
+        <legend>Genders (required):</legend>
+        <label for="male-gender"><input type="radio" class="inline" checked name="male-female" id="male-gender" value="male">Male</label>
+        <label for="female-gender"><input type="radio" class="inline" name="male-female" id="female-gender" value="female">Female</label>
+    </fieldset>
+    <fieldset>
+         <label for="age-label">Enter Your Age :<input type="number" id="age-label" min="17" max="55"></label>
+        <label for="document-label">Upload Your Documents:<input type="file" id="document-label"></label>
+        <label for="dropdown" id="dropdown-label" >Where did you know about this job?
+        <select id="dropdown">
+            <option value="">(Select one)</option>
+            <option value="1">Newspaper</option>
+            <option value="2">Company's website</option>
+            <option value="3">Company's Facebook  account</option>
+            <option value="4">Others</option>
+            </select>
+            </label>
+        <label for="reason-label">The reason why you are the perfect candidate :<textarea id="reason-label" rows="5" cols="50" placeholder="I am the perfect candidate because..."></textarea> </label> 
+    </fieldset> 
+    <fieldset>
+        <label for="legal-concent"><input type="checkbox" class="inline" id="legal-concent" value="legal-consent">A legal consent to agree on specific additional terms and test two lines.</label>
+        <label for="terms-and-conditions">
+            <input type="checkbox" class="inline" id="terms-and-conditions" value="terms-and-conditions">I accept the <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form">terms and conditions.</a>
+        </label>
+    </fieldset>
+    <button id="submit" value="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
